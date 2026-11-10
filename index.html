@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Analyze public GitHub repositories and explore project statistics."
+    >
+
+    <title>RepoScope — GitHub Repository Analyzer</title>
+
+    <link rel="stylesheet" href="style/index.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="./" aria-label="RepoScope home">
+            <span class="brand-icon" aria-hidden="true">R</span>
+            <span>RepoScope</span>
+        </a>
+
+        <span class="header-label">Repository Analytics</span>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <p class="eyebrow">GITHUB ANALYTICS</p>
+
+            <h1 id="hero-title">
+                Explore your repositories.
+            </h1>
+
+            <p class="hero-description">
+                Turn your public GitHub repositories into
+                clear statistics and useful insights.
+            </p>
+
+            <form id="search-form" class="search-form">
+                <label for="username">
+                    GitHub username
+                </label>
+
+                <div class="search-controls">
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="e.g. octocat"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" id="search-button">
+                        Analyze repositories
+                    </button>
+                </div>
+                <input type="text" placeholder="When you finish writing, click the Analyze" id="input-search" >
+
+                <p class="form-hint">
+                    No login required for public repositories.
+                </p>
+            </form>
+        </section>
+
+        <section class="features" aria-label="Features">
+            <article class="feature-card">
+                <h2>Repository insights</h2>
+                <p>
+                    Explore repository details and
+                    understand your projects.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <h2>Visual analytics</h2>
+                <p>
+                    Discover language distribution
+                    and repository statistics.
+                </p>
+            </article>
+        </section>
+
+        <p id="status-message" role="status" aria-live="polite"></p>
+
+        <section
+            id="report"
+            class="report"
+            aria-label="Repository report"
+            hidden
+        >
+     
+            <!-- Repository report will be rendered here later. -->
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            RepoScope · Built for exploring public repositories.
+        </p>
+    </footer>
+    <script src="script/index.js"></script>
+</body>
+</html>
